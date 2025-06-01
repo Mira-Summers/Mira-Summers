@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="student-pojo" />
+        <module name="dubbo-service" />
+        <module name="dubbo-client" />
+        <module name="student-dubbo-server" />
+        <module name="dubbo-pojo" />
+        <module name="student-dubbo-client" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="student-dubbo-pojo" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="dubbo-client" options="-parameters" />
+      <module name="dubbo-pojo" options="-parameters" />
+      <module name="dubbo-service" options="-parameters" />
+      <module name="student-dubbo-client" options="-parameters" />
+      <module name="student-dubbo-pojo" options="" />
+      <module name="student-dubbo-server" options="-parameters" />
+    </option>
+  </component>
+</project>

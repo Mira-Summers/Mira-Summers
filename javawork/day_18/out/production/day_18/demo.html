@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../jquery/jquery-1.7.2.js"></script>
+    <script>
+        $(function ()
+        {//属性过滤选择器
+            $("[value='全选']").click(function (){
+                $(".hobby").each(function (){
+                    this.checked="true";
+                })
+            })
+            //属性过滤选择器
+            $("[value='全不选']").click(function (){
+                $(".hobby").each(function (){
+                    this.checked="false";
+                })
+            })
+            //属性过滤选择器
+            $("[value='反选']").click(function (){
+                $(".hobby").each(function (){
+                    this.checked=!this.checked;
+                })
+            })
+        })
+    </script>
+</head>
+<body>
+打篮球:<input type="checkbox" class="hobby" name="hobby">
+敲代码:<input type="checkbox" class="hobby" name="hobby">
+打游戏:<input type="checkbox" class="hobby" name="hobby">
+踢足球:<input type="checkbox" class="hobby" name="hobby">
+<input type="button" value="全不选">
+<input type="button" value="全选">
+<input type="button" value="反选">
+</body>
+</html>

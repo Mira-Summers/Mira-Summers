@@ -1,0 +1,20 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="travel_project:war exploded">
+    <output-path>$PROJECT_DIR$/out/artifacts/travel_project_war_exploded</output-path>
+    <root id="root">
+      <element id="javaee-facet-resources" facet="travel_project/web/Web" />
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="travel_project" />
+        </element>
+        <element id="directory" name="lib">
+          <element id="library" level="project" name="fastjson-1.1.27" />
+          <element id="library" level="project" name="mysql-connector-java-5.1.28-bin" />
+          <element id="library" level="project" name="servlet-api" />
+          <element id="library" level="project" name="taglibs-standard-impl-1.2.1" />
+          <element id="library" level="project" name="taglibs-standard-spec-1.2.1" />
+        </element>
+      </element>
+    </root>
+  </artifact>
+</component>

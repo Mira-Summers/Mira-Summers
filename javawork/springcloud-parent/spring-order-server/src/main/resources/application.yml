@@ -1,0 +1,27 @@
+server:
+  port: 8086
+spring:
+  application:
+    name: orderServer
+enreka:
+  client:
+    service-url:
+      defaultZone:
+        http://http://localhost:10086/eureka
+  datasource:
+    url: jdbc:mysql://localhost:3306/cloud_order?serverTimezone=GMT&characterEncoding=utf-8
+    username: root
+    password: root
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+
+ribbon:
+  eager-load:
+    enabled:ture:
+      clients:userservice
+mybatis:
+  type-aliases-package:
+  configuration:
+    map-underscore-to-camel-case: true
+
+

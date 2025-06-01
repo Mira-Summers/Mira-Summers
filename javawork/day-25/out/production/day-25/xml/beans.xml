@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="student" class="beans.Student">
+        <property name="address" value="镇江"></property>
+        <property name="age" value="19"></property>
+        <property name="name" value="111"></property>
+        <!--注入数组类型的-->
+        <property name="strings">
+            <array>
+                <value>111</value>
+                <value>333</value>
+                <value>555</value>
+            </array>
+        </property>
+        <property name="map">
+            <map>
+                <entry key="key1" value="value1"></entry>
+            </map>
+        </property>
+
+    </bean>
+    <bean id="dao" class="account.dao.StudentDao">
+
+    </bean>
+    <bean id="person" class="beans.Person" scope="prototype" init-method="init" destroy-method="destory">
+
+    </bean>
+
+
+
+
+</beans>

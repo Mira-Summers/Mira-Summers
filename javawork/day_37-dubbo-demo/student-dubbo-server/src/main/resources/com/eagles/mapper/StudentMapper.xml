@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.eagles.mapper.StudentMapper">
+    <resultMap id="stuVo" type="com.eagles.student.pojo.Student">
+        <id column="sid" property="sid"></id>
+        <result column="stu_name" property="stu_name"></result>
+        <result column="age" property="age"></result>
+        <result column="birthday" property="birthday"></result>
+        <result column="address" property="address"></result>
+        <result column="hobby" property="hobby"></result>
+        <result column="cid" property="cid"></result>
+        <association property="clazz" javaType="com.eagles.student.pojo.Clazz">
+            <id column="cid" property="cid"></id>
+            <result column="className" property="className"></result>
+        </association>
+    </resultMap>
+    
+    <select id="students" parameterType="hashmap" resultMap="stuVo">
+        select * from tb_student ts join tb_class tc on ts.cid = tc.cid
+    </select>
+</mapper>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<script>
+    window.onload=function (){
+        let buttonobj=document.getElementById("button")
+        buttonobj.onclick=function (){
+            alert("鼠标单机绑定事件！")
+        }
+        document.getElementById("select").onchange=function (){
+            alert("内容已改变！！！")
+        }
+
+    }
+</script>
+<body>
+<input id="button" type="button" value="test">
+<select id="select">
+    <option>--请选择--</option>
+    <option>--动物--</option>
+    <option>--人--</option>
+</select>
+<br/>
+</body>
+</html>

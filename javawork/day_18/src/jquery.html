@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<script src="jquery-1.7.2.js"></script>
+<script>
+    window.onload=function (){
+        //原生的dom对象
+        let elementById=document.getElementById("button");
+        let jqueryObj=$(elementById)
+        alert(jqueryObj)
+    }
+
+</script>
+<body>
+<input type="button" id="button" value="test">
+</body>
+</html>

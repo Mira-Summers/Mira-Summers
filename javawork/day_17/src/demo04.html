@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>注册页面</title>
+</head>
+<script>
+function toUsername(){
+    let regExp=new RegExp(/^[A-Za-z0-9]+$/);
+    let value=document.getElementById("username").value
+
+    if(regExp.test(value)){
+        document.getElementById("usernameSpan").innerText="用户名合法"
+        document.getElementById("usernameSpan").style="color:green"
+    }else{
+        if (value==""){
+            document.getElementById("usernameSpan").innerText=""}
+            else{
+                document.getElementById("usernameSpan").innerText="用户名不合法"
+                document.getElementById("usernameSpan").style="color:red"
+            }
+        }
+    }
+function toPassword(){
+    let regExp=new RegExp(/^[a-zA-Z]\w{5,17}$/);
+    let value=document.getElementById("password").value
+
+    if(regExp.test(value)){
+        document.getElementById("passwordSpan").innerText="密码合法"
+        document.getElementById("passwordSpan").style="color:green"
+    }else{
+        if (value==""){
+            document.getElementById("passwordSpan").innerText=""}
+        else{
+            document.getElementById("passwordSpan").innerText="密码不合法"
+            document.getElementById("passwordSpan").style="color:red"
+        }
+    }
+}
+function toPassword2(){
+    let value1
+
+}
+
+
+
+</script>
+<body>
+<table align="center">
+   <tr>
+    <td>用户名</td>
+    <td>
+       <input type="text" id="username" onblur="toUsername()">
+       <span id="usernameSpan"></span>
+    </td>
+   </tr>
+
+   <br>
+    <tr>
+    <td>邮箱</td>
+    <td><input type="text"></td>
+    </tr>
+    <tr>
+        <td>手机号</td>
+        <td><input type="text"></td>
+    </tr>
+    <tr>
+        <td>密码</td>
+        <td><input type="text"></td>
+        <span id="passwordSpan"></span>
+
+    </tr>
+    <td>确认密码</td>
+    <td><input type="text"></td>
+    <tr>
+        <td><input type="button" value="注册"></td>
+    </tr>
+    </table>
+</body>
+</html>

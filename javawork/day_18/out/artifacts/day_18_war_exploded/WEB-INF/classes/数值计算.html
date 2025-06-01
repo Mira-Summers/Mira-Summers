@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<script src="jquery-1.7.2.js"></script>
+<script>
+    $(function (){
+        $("[value='计算']").click(function (){
+            let ysf=$("#select").val()
+            let num1=$("#select").val()
+            let num2=$("#select").val()
+            let data;
+            if (ysf=="+"){
+                data=Number(num1)+Number(num2);
+            }else if(ysf=="-"){
+                data=Number(num1)-Number(num2);}
+            else if(ysf=="*"){
+                data=Number(num1)*Number(num2);}
+            else if(ysf=="/"){
+                if(num2==0){
+                    alert("不能为0")
+                }else{
+                    data=Number(num1)/Number(num2);}
+                }
+            $("#data").val(data);
+
+        })
+
+    })
+
+</script>
+<body>
+<input type="text" id="num1">
+<select id ="select">
+    <option value="+">+</option>
+    <option value="-">-</option>
+    <option value="*">*</option>
+    <option value="/">/</option>
+</select>
+<input type="text" id="num2">
+<input type="button" value="计算">
+结果：<input type="text" id="data">
+</body>
+</html>

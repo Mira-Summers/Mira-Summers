@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>求和函数和学生变量</title>
+</head>
+<script>
+
+    function sumfun(a,b) {
+        if (typeof a == "number" && typeof b == "number") {
+        return a+b;}
+    else{
+    alert("数据不合法")}
+
+    }
+    let data=sumfun(3,5)
+    alert(data)
+
+    let array=[
+        {name:"张三",age:20,address:"镇江",theclass:"a班"},
+        {name:"李四",age:20,address:"镇江",theclass:"b班"},
+        {name:"王五",age:20,address:"镇江",theclass:"c班"},
+        {name:"赵六",age:20,address:"镇江",theclass:"d班"},
+        {name:"田七",age:20,address:"镇江",theclass:"e班"},
+    ]
+    for(let i in array){
+        console.log("姓名"+array[i].name+"-年龄"+array[i].age+)
+    }
+
+</script>
+<body>
+
+</body>
+</html>
